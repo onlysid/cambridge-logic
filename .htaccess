@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+    Options FollowSymLinks
+    RewriteEngine On
+
+    #404 Page
+    ErrorDocument 404 /404.php
+    ErrorDocument 403 /404.php
+
+    #Page Redirects
+    RewriteRule ^include/ - [L,R=404]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_URI} !^/phpmyadmin/?$
+    RewriteRule ^([^\.]+)$ $1.php [NC,L]
+</IfModule>
