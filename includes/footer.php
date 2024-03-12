@@ -77,6 +77,8 @@
 link = link.slice(0,-1);
 document.write("<a href='mailto:"+link+"'>"+link+"</a>")
 </script>
+<br>
+<a href="/privacy">Privacy Policy</a>
 									
 				</span><br>
     </div>
