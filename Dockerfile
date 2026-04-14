@@ -11,6 +11,8 @@ COPY . .
 # Copy nginx config
 COPY nginx.conf /etc/nginx/sites-available/default
 
+COPY custom.ini /usr/local/etc/php/conf.d/custom.ini
+
 EXPOSE 8080
 
 CMD service nginx start && php-fpm
